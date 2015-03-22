@@ -13,7 +13,9 @@ class AppView extends Component {
     addSubscription(app.onChange.listen(invalidate));
   }
 
-  build() => vRoot(type: 'Application')(
+  updateView() {
+    updateRoot(vRoot(type: 'Application')(
       app.state == State.init ? vMenu() : vGameView(data: app.game)
-  );
+    ));
+  }
 }

@@ -8,7 +8,7 @@ part 'menu.g.dart';
 
 @ComponentMeta()
 class MenuButton extends Component<String> {
-  build() => vRoot(type: 'MenuButton')(data);
+  updateView() { updateRoot(vRoot(type: 'MenuButton')(data)); }
 }
 
 @ComponentMeta()
@@ -23,8 +23,10 @@ class Menu extends Component {
     app.start();
   }
 
-  build() => vRoot(type: 'Menu')([
-    vElement('div', type: 'MenuTitle')('Dual N-Back'),
-    vMenuButton(type: 'StartButton', data: 'Start')
-  ]);
+  updateView() {
+    updateRoot(vRoot(type: 'Menu')([
+      vElement('div', type: 'MenuTitle')('Dual N-Back'),
+      vMenuButton(type: 'StartButton', data: 'Start')
+    ]));
+  }
 }

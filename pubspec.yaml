@@ -9,4 +9,4 @@ environment:
 dependencies:
   browser: any
   uix:
-    path: ../uix
+    git: git://github.com/localvoid/uix.git

@@ -19,10 +19,12 @@ class CheckButtonData extends _CheckButtonDataShallowEqOperator {
 
 @ComponentMeta()
 class CheckButton extends Component<CheckButtonData> {
-  build() => vRoot(type: 'CheckButton', classes: _rootClasses())([
-    vElement('span', type: 'CheckButton_hotKey')(data.hotKey),
-    vElement('span', type: 'CheckButton_label')(data.label)
-  ]);
+  updateView() {
+    updateRoot(vRoot(type: 'CheckButton', classes: _rootClasses())([
+      vElement('span', type: 'CheckButton_hotKey')(data.hotKey),
+      vElement('span', type: 'CheckButton_label')(data.label)
+    ]));
+  }
 
   List<String> _rootClasses() {
     if (data.checked) {
@@ -39,7 +41,7 @@ class CheckButton extends Component<CheckButtonData> {
 
 @ComponentMeta(dirtyCheck: false)
 class Grid extends Component<Game> {
-  build() {
+  updateView() {
     final children = [];
     for (var i = 0; i < Game.visualCount; i++) {
       if (data.isVisualVisible && data.currentVisual == i) {
@@ -49,14 +51,14 @@ class Grid extends Component<Game> {
       }
     }
 
-    return vRoot(type: 'Grid', children: children);
+    updateRoot(vRoot(type: 'Grid', children: children));
   }
 }
 
 @ComponentMeta(dirtyCheck: false)
 class GameStats extends Component<Game> {
-  build() {
-    return vRoot(type: 'GameStats')('${data.visualFalsePositives}/${data.visualMisses} | ${data.audioFalsePositives}/${data.audioMisses}');
+  updateView() {
+    updateRoot(vRoot(type: 'GameStats')('${data.visualFalsePositives}/${data.visualMisses} | ${data.audioFalsePositives}/${data.audioMisses}'));
   }
 }
 
@@ -95,8 +97,8 @@ class GameView extends Component<Game> {
     return true;
   }
 
-  build() {
-    return vRoot(type: 'Game')([
+  updateView() {
+    updateRoot(vRoot(type: 'Game')([
       vGameStats(data: data),
       vGrid(data: data),
       vElement('div', type: 'Game_buttons')([
@@ -107,7 +109,7 @@ class GameView extends Component<Game> {
             type: 'Game_buttons_audio',
             data: new CheckButtonData(hotKey: 'L', label: 'Audio', checked: data.audioChecked, error: data.audioError)),
       ])
-    ]);
+    ]));
   }
 
   attached() {
