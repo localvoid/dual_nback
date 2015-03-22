@@ -1,0 +1,105 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.Application {
+  width: 100%;
+  height: 100%;
+}
+
+.Menu {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.MenuTitle {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.MenuButton {
+  border: 1px solid #666;
+  border-radius: 2px;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.MenuButton:hover {
+  background: #f3f3f3;
+}
+
+.Game {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.Grid {
+  width: 300px;
+  margin: 20px auto;
+}
+
+.Cell {
+  vertical-align: top;
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 1px;
+  width: 98px;
+  height: 98px;
+  border: 1px dotted #ddd;
+}
+
+.Cell.checked {
+  background: #4585ae;
+  box-shadow: 0 0 3px #000;
+  border: 0;
+}
+
+.Game_buttons {
+  margin: 0 auto;
+  width: 300px;
+}
+
+.CheckButton {
+  box-sizing: border-box;
+  width: 150px;
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid #666;
+  border-radius: 2px;
+}
+
+.CheckButton:first-child {
+  border-radius: 2px 0 0 2px;
+  border-right: 0;
+}
+.CheckButton:last-child {
+  border-radius: 0 2px 2px 0;
+}
+
+.CheckButton_hotKey {
+  color: #1a730c;
+  font-weight: bold;
+}
+
+.CheckButton_label {
+  margin-left: 10px;
+}
+
+.CheckButton.checked {
+  background: #e2fcfa;
+}
+
+.CheckButton.error .CheckButton_label {
+  color: #c33;
+}
