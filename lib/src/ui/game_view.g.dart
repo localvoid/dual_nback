@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// 2015-03-21T17:31:35.935Z
+// 2015-03-22T11:22:56.367Z
 
 part of dual_nback.src.ui.game_view;
 
@@ -26,8 +26,10 @@ abstract class _CheckButtonDataShallowEqOperator {
 // Target: class CheckButton
 // **************************************************************************
 
-CheckButton createCheckButton([CheckButtonData data]) {
-  final r = new CheckButton()..data = data;
+CheckButton createCheckButton([CheckButtonData data, Component parent]) {
+  final r = new CheckButton()
+    ..parent = parent
+    ..data = data;
   r.init();
   return r;
 }
@@ -48,8 +50,10 @@ VNode vCheckButton({CheckButtonData data, Object key, String type,
 // Target: class Grid
 // **************************************************************************
 
-Grid createGrid([Game data]) {
-  final r = new Grid()..data = data;
+Grid createGrid([Game data, Component parent]) {
+  final r = new Grid()
+    ..parent = parent
+    ..data = data;
   r.init();
   return r;
 }
@@ -70,8 +74,10 @@ VNode vGrid({Game data, Object key, String type, Map<String, String> attrs,
 // Target: class GameStats
 // **************************************************************************
 
-GameStats createGameStats([Game data]) {
-  final r = new GameStats()..data = data;
+GameStats createGameStats([Game data, Component parent]) {
+  final r = new GameStats()
+    ..parent = parent
+    ..data = data;
   r.init();
   return r;
 }
@@ -92,8 +98,10 @@ VNode vGameStats({Game data, Object key, String type, Map<String, String> attrs,
 // Target: class GameView
 // **************************************************************************
 
-GameView createGameView([Game data]) {
-  final r = new GameView()..data = data;
+GameView createGameView([Game data, Component parent]) {
+  final r = new GameView()
+    ..parent = parent
+    ..data = data;
   r.init();
   return r;
 }

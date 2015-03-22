@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// 2015-03-21T13:21:16.308Z
+// 2015-03-22T11:22:56.372Z
 
 part of dual_nback.src.ui.menu;
 
@@ -8,8 +8,10 @@ part of dual_nback.src.ui.menu;
 // Target: class MenuButton
 // **************************************************************************
 
-MenuButton createMenuButton([String data]) {
-  final r = new MenuButton()..data = data;
+MenuButton createMenuButton([String data, Component parent]) {
+  final r = new MenuButton()
+    ..parent = parent
+    ..data = data;
   r.init();
   return r;
 }
@@ -30,8 +32,10 @@ VNode vMenuButton({String data, Object key, String type,
 // Target: class Menu
 // **************************************************************************
 
-Menu createMenu([dynamic data]) {
-  final r = new Menu()..data = data;
+Menu createMenu([dynamic data, Component parent]) {
+  final r = new Menu()
+    ..parent = parent
+    ..data = data;
   r.init();
   return r;
 }

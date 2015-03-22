@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// 2015-03-21T13:13:12.564Z
+// 2015-03-22T11:22:56.324Z
 
 part of dual_nback.src.ui.app_view;
 
@@ -8,8 +8,10 @@ part of dual_nback.src.ui.app_view;
 // Target: class AppView
 // **************************************************************************
 
-AppView createAppView([dynamic data]) {
-  final r = new AppView()..data = data;
+AppView createAppView([dynamic data, Component parent]) {
+  final r = new AppView()
+    ..parent = parent
+    ..data = data;
   r.init();
   return r;
 }
