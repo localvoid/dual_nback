@@ -1,42 +1,24 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// 2015-03-22T11:22:56.367Z
+// 2015-03-28T11:19:43.430Z
 
 part of dual_nback.src.ui.game_view;
-
-// **************************************************************************
-// Generator: UixGenerator
-// Target: class CheckButtonData
-// **************************************************************************
-
-abstract class _CheckButtonDataShallowEqOperator {
-  bool get checked;
-  bool get error;
-  String get hotKey;
-  String get label;
-  const _CheckButtonDataShallowEqOperator();
-  bool operator ==(CheckButtonData other) => (identical(this, other) ||
-      ((checked == other.checked) &&
-          (error == other.error) &&
-          (hotKey == other.hotKey) &&
-          (label == other.label)));
-}
 
 // **************************************************************************
 // Generator: UixGenerator
 // Target: class CheckButton
 // **************************************************************************
 
-CheckButton createCheckButton([CheckButtonData data, Component parent]) {
-  final r = new CheckButton()
+CheckButton createCheckButton(
+    [CheckButtonData data, List<VNode> children, Component parent]) {
+  return new CheckButton()
     ..parent = parent
-    ..data = data;
-  r.init();
-  return r;
+    ..data = data
+    ..children = children;
 }
 VNode vCheckButton({CheckButtonData data, Object key, String type,
     Map<String, String> attrs, Map<String, String> style, List<String> classes,
     List<VNode> children}) => new VNode.component(createCheckButton,
-    flags: VNode.componentFlag | VNode.dirtyCheckFlag,
+    flags: VNode.componentFlag,
     key: key,
     data: data,
     type: type,
@@ -50,12 +32,11 @@ VNode vCheckButton({CheckButtonData data, Object key, String type,
 // Target: class Grid
 // **************************************************************************
 
-Grid createGrid([Game data, Component parent]) {
-  final r = new Grid()
+Grid createGrid([Game data, List<VNode> children, Component parent]) {
+  return new Grid()
     ..parent = parent
-    ..data = data;
-  r.init();
-  return r;
+    ..data = data
+    ..children = children;
 }
 VNode vGrid({Game data, Object key, String type, Map<String, String> attrs,
     Map<String, String> style, List<String> classes,
@@ -74,12 +55,11 @@ VNode vGrid({Game data, Object key, String type, Map<String, String> attrs,
 // Target: class GameStats
 // **************************************************************************
 
-GameStats createGameStats([Game data, Component parent]) {
-  final r = new GameStats()
+GameStats createGameStats([Game data, List<VNode> children, Component parent]) {
+  return new GameStats()
     ..parent = parent
-    ..data = data;
-  r.init();
-  return r;
+    ..data = data
+    ..children = children;
 }
 VNode vGameStats({Game data, Object key, String type, Map<String, String> attrs,
     Map<String, String> style, List<String> classes,
@@ -98,12 +78,11 @@ VNode vGameStats({Game data, Object key, String type, Map<String, String> attrs,
 // Target: class GameView
 // **************************************************************************
 
-GameView createGameView([Game data, Component parent]) {
-  final r = new GameView()
+GameView createGameView([Game data, List<VNode> children, Component parent]) {
+  return new GameView()
     ..parent = parent
-    ..data = data;
-  r.init();
-  return r;
+    ..data = data
+    ..children = children;
 }
 VNode vGameView({Game data, Object key, String type, Map<String, String> attrs,
     Map<String, String> style, List<String> classes,

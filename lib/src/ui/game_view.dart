@@ -7,14 +7,17 @@ import '../game.dart';
 
 part 'game_view.g.dart';
 
-@ShallowEqOperator()
-class CheckButtonData extends _CheckButtonDataShallowEqOperator {
+class CheckButtonData {
   final bool checked;
   final bool error;
   final String hotKey;
   final String label;
 
   const CheckButtonData({this.hotKey, this.label, this.checked: false, this.error: false});
+
+  bool operator==(CheckButtonData other) =>
+      (checked == other.checked && error == other.error
+      && hotKey == other.hotKey && label == other.label);
 }
 
 @ComponentMeta()
@@ -39,8 +42,13 @@ class CheckButton extends Component<CheckButtonData> {
   }
 }
 
-@ComponentMeta(dirtyCheck: false)
+@ComponentMeta()
 class Grid extends Component<Game> {
+  set data(Game newData) {
+    data_ = newData;
+    invalidate();
+  }
+
   updateView() {
     final children = [];
     for (var i = 0; i < Game.visualCount; i++) {
@@ -55,15 +63,25 @@ class Grid extends Component<Game> {
   }
 }
 
-@ComponentMeta(dirtyCheck: false)
+@ComponentMeta()
 class GameStats extends Component<Game> {
+  set data(Game newData) {
+    data_ = newData;
+    invalidate();
+  }
+
   updateView() {
     updateRoot(vRoot(type: 'GameStats')('${data.visualFalsePositives}/${data.visualMisses} | ${data.audioFalsePositives}/${data.audioMisses}'));
   }
 }
 
-@ComponentMeta(dirtyCheck: false)
+@ComponentMeta()
 class GameView extends Component<Game> {
+  set data(Game newData) {
+    data_ = newData;
+    invalidate();
+  }
+
   StreamSubscription _keySub;
 
   init() {
