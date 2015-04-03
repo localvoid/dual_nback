@@ -26,7 +26,7 @@ class Menu extends Component {
   updateView() {
     updateRoot(vRoot(type: 'Menu')([
       vElement('div', type: 'MenuTitle')('Dual N-Back'),
-      vMenuButton(type: 'StartButton', data: 'Start')
+      vComponent($MenuButton, type: 'StartButton', data: 'Start')
     ]));
   }
 }

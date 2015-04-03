@@ -117,13 +117,13 @@ class GameView extends Component<Game> {
 
   updateView() {
     updateRoot(vRoot(type: 'Game')([
-      vGameStats(data: data),
-      vGrid(data: data),
+      vComponent($GameStats, data: data),
+      vComponent($Grid, data: data),
       vElement('div', type: 'Game_buttons')([
-        vCheckButton(
+        vComponent($CheckButton,
             type: 'Game_buttons_visual',
             data: new CheckButtonData(hotKey: 'A', label: 'Visual', checked: data.visualChecked, error: data.visualError)),
-        vCheckButton(
+        vComponent($CheckButton,
             type: 'Game_buttons_audio',
             data: new CheckButtonData(hotKey: 'L', label: 'Audio', checked: data.audioChecked, error: data.audioError)),
       ])

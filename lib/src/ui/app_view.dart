@@ -15,7 +15,7 @@ class AppView extends Component {
 
   updateView() {
     updateRoot(vRoot(type: 'Application')(
-      app.state == State.init ? vMenu() : vGameView(data: app.game)
+      app.state == State.init ? vComponent($Menu) : vComponent($GameView, data: app.game)
     ));
   }
 }

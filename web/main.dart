@@ -8,6 +8,6 @@ void main() {
   initApp();
 
   scheduler.nextFrame.write().then((_) {
-    injectComponent(createAppView(), html.document.body);
+    injectComponent(new AppView(), html.document.body);
   });
 }
